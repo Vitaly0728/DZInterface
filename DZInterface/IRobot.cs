@@ -9,7 +9,8 @@ namespace DZInterface
     internal interface IRobot
     {
         public string GetInfo();
-        public string GetRobotType();
+        public string GetRobotType() => "I am a simple robot.";
+        
         public List<string> GetComponents();
     }
 }

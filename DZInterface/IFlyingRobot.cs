@@ -8,9 +8,7 @@ namespace DZInterface
 {
     internal interface IFlyingRobot : IRobot
     {
-        public string GetRobotType()
-        { 
-            return "I am a flying robot."; 
-        }        
+        public string GetRobotType() => "I am a flying robot.";
+
     }
 }

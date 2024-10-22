@@ -1,32 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using System.Collections.Generic;
+﻿
 
 namespace DZInterface
 {
     internal class Quadcopter: IFlyingRobot , IChargeable
     {
         
-        List<string> _components = new List<string> { "rotor1", "rotor2", "rotor3", "rotor4" };
+        private List<string> _components = new List<string> {};
+        private string _infoQuadcopter;
 
-        public List<string> Components { get => _components; set => _components = value; }
 
-        public string GetRobotType()
+        public Quadcopter(string info, List<string> components)
         {
-            return ((IFlyingRobot)this).GetRobotType();
+            _components = components;
+            _infoQuadcopter = info;
         }
-        
+
+        public string GetRobotType() => "I am a flying Quadcopter.";
+
         public string GetInfo()
         {
-            return "";
-        }       
-
+            return _infoQuadcopter;
+        }    
         
         public List<string> GetComponents()
         {            
-           return Components;            
+           return _components;            
         }
         public void Charge()
         {
